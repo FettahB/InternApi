@@ -11,8 +11,7 @@
           "Microsoft.EntityFrameworkCore": "8.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.0",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.19.5",
-          "MySqlConnector": "2.3.1",
-          "MySqlConnector.DependencyInjection": "2.3.1",
+          "Pomelo.EntityFrameworkCore.MySql": "8.0.0-beta.2",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -399,15 +398,15 @@
           }
         }
       },
-      "MySqlConnector.DependencyInjection/2.3.1": {
+      "Pomelo.EntityFrameworkCore.MySql/8.0.0-beta.2": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.0",
           "MySqlConnector": "2.3.1"
         },
         "runtime": {
-          "lib/net7.0/MySqlConnector.DependencyInjection.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.3.1.0"
+          "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
           }
         }
       },
@@ -745,12 +744,12 @@
       "path": "mysqlconnector/2.3.1",
       "hashPath": "mysqlconnector.2.3.1.nupkg.sha512"
     },
-    "MySqlConnector.DependencyInjection/2.3.1": {
+    "Pomelo.EntityFrameworkCore.MySql/8.0.0-beta.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-JTjRNWGKACVtVUlsa7OEXHvBsYH6Y/7a5xT/h9aNyUhYMgzRN5DsbkJKoj9njrurlCZGTF7XBnFLXPvUaLHy+w==",
-      "path": "mysqlconnector.dependencyinjection/2.3.1",
-      "hashPath": "mysqlconnector.dependencyinjection.2.3.1.nupkg.sha512"
+      "sha512": "sha512-rWLS2sdiMmVRAkFeKvGWeuYrEVpqGidK+K9yahbWu7SUMC372GW9KANIegv3YMM0GkvDITyR7gBes1+MUqy1oA==",
+      "path": "pomelo.entityframeworkcore.mysql/8.0.0-beta.2",
+      "hashPath": "pomelo.entityframeworkcore.mysql.8.0.0-beta.2.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.4.0": {
       "type": "package",

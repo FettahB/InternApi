@@ -1,17 +1,19 @@
 using InternApi.Database.Context;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
-using MySql.Data;
+using Microsoft.AspNetCore.Hosting.Server;
+using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddMySqlDataSource(builder.Configuration.GetConnectionString("Default")!);
+
+var connectionString = builder.Configuration.GetConnectionString("Default");
+builder.Services.AddDbContext<MyDbContext>(options => options.UseMySql(connectionString!, ServerVersion.AutoDetect(connectionString!)));
+
+
 using var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -21,7 +23,5 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
