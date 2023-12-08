@@ -1,0 +1,6 @@
+@FettahResearchProject.API_HostAddress = http://localhost:5187
+
+GET {{FettahResearchProject.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

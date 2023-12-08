@@ -1,0 +1,2 @@
+-To initialize project-
+docker-compose up
