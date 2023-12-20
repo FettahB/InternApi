@@ -11,5 +11,8 @@ namespace FettahResearchProject.Enums
     {
         [Description("Oluşturuldu")]
         Created = 1,
+        Updates = 2,
+        Deleted = 3,
+
     }
 }

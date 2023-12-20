@@ -13,10 +13,10 @@ namespace FettahResearchProject.Models.Entities
         public Status Status { get; set; }
 
         public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set;}
+        public DateTime? UpdatedAt { get; set;}
 
         public int CreatedBy { get; set; }
-        public int UpdatedBy { get; set;}
+        public int? UpdatedBy { get; set;}
         protected BaseEntity()
         {
             CreatedAt = DateTime.UtcNow;

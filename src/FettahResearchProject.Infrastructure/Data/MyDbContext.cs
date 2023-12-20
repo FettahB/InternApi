@@ -17,5 +17,10 @@ namespace FettahResearchProject.Infrastructure.Data
         {
 
         }
+        public void DetachAll()
+        {
+            ChangeTracker.Entries().Where(e => e.Entity != null).ToList()
+                .ForEach(e => e.State = EntityState.Detached);
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using FettahResearchProject.Models.Entities;
+﻿using FettahResearchProject.Infrastructure.Repositories;
+using FettahResearchProject.Models.Entities;
+using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +12,15 @@ namespace FettahResearchProject.Infrastructure.UnitOfWork
     public interface IUnitOfWork : IDisposable
     {
         Task Commit();
-
         int SaveChanges();
 
-        IBaseReposity<Hotel> Hotel { get; }
+        Task<IDbContextTransaction> BeginTransactionAsync();
+
+        Task TransanctionCommit(IDbContextTransaction transaction);
+        Task TransactionRollback(IDbContextTransaction transaction);
+
+        Task<int> SaveChangesAsync(bool isDelete = false);
+
+        IBaseRepository<Hotel> Hotel {  get; }
     }
 }
